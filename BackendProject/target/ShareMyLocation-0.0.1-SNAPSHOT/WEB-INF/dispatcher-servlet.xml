@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xsi:schemaLocation="
+		http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context
+		http://www.springframework.org/schema/context/spring-context.xsd
+		http://www.springframework.org/schema/mvc
+		http://www.springframework.org/schema/mvc/spring-mvc.xsd
+		http://www.springframework.org/schema/tx 
+		http://www.springframework.org/schema/tx/spring-tx.xsd">
+		<!--  Spring configuration  -->
+		<!--  Support for component scanning -->
+	    <context:component-scan base-package="hr.fer.ruazosa.sharemylocation" />
+	    
+		<!--  Support for conversion, formatting, validation -->
+	    <mvc:annotation-driven />
+
+  		<!-- Define Database DataSource / connection pool -->
+		<bean id="myDataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource" destroy-method="close">
+        	<property name="driverClass" value="org.postgresql.Driver" />
+        	<property name="jdbcUrl" value="jdbc:postgresql://echo.db.elephantsql.com:5432/hvpihhlp" />
+        	<property name="user" value="hvpihhlp" />
+        	<property name="password" value="SQolJ5OTpX6_9VtFEjrrzTmP3-5wa1ob" />
+
+	        <!-- Connection pool properties for C3P0 -->
+    	    <property name="initialPoolSize" value="1"/>	<!-- Number of Connections a pool will try to acquire upon startup -->
+	        <property name="minPoolSize" value="1" />		<!-- Minimum number of JDBC connections in the pool -->
+        	<property name="maxPoolSize" value="1" />		<!-- Maximum number of JDBC connections in the pool -->
+        	<property name="maxIdleTime" value="30000" />	<!-- Idle time in seconds before the connection will be destroyed -->
+		</bean>  
+	
+    	<!-- Setup Hibernate session factory -->
+		<bean id="sessionFactory" class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
+			<property name="dataSource" ref="myDataSource" />
+			<property name="packagesToScan" value="hr.fer.ruazosa" />
+			<property name="hibernateProperties">
+		   		<props>
+		      		<prop key="hibernate.dialect">org.hibernate.dialect.PostgreSQL92Dialect</prop>
+		      		<prop key="hibernate.show_sql">true</prop>
+		   		</props>
+			</property>
+   		</bean>	  
+
+    	<!-- Hibernate transaction manager configuration -->
+		<bean id="myTransactionManager" class="org.springframework.orm.hibernate5.HibernateTransactionManager">
+        	<property name="sessionFactory" ref="sessionFactory"/>
+    	</bean>
+    
+        <!-- Enable transaction maanger -->
+		<tx:annotation-driven transaction-manager="myTransactionManager" />
+	
+	   
+</beans>

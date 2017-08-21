@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" 
+xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+
+  <display-name>Contact Manager</display-name>
+
+	<!--  Welcome file that loads on localhost:8080 request  -->
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>index.html</welcome-file>
+  </welcome-file-list>
+  
+  <servlet>
+  	<!--  Defining Front Controller as the Spring Dispatcher Servlet -->
+    <servlet-name>dispatcher</servlet-name>
+    	<servlet-class>
+	    	org.springframework.web.servlet.DispatcherServlet
+	    </servlet-class>
+    	<init-param>
+      	<param-name>contextConfigLocation</param-name>
+      	<!-- Location of the the Spring configuration file -->
+      	<param-value>/WEB-INF/dispatcher-servlet.xml</param-value>
+    	</init-param>
+        <load-on-startup>1</load-on-startup>
+ 	 </servlet>
+  	<servlet-mapping>
+  		<!--  Setting the URL mapping to the Dispatcher Serlvet. All the URLs are handled by this dispatcher -->
+    	<servlet-name>dispatcher</servlet-name>
+    	<url-pattern>/</url-pattern>
+	</servlet-mapping>
+   
+</web-app>

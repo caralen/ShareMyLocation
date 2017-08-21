@@ -1,0 +1,19 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto"
+      xmlns:tools="http://schemas.android.com/tools"
+      tools:context="hr.fer.ruazosa.sharemylocation.ChatActivity">
+    <item
+        android:id="@+id/group_info"
+        android:orderInCategory="100"
+        android:title="Settings"
+        android:onClick="seeGroupInfo"
+        app:showAsAction="never"
+        />
+    <item
+        android:id="@+id/exit_group"
+        android:orderInCategory="100"
+        android:title="Exit group"
+        android:onClick="exitGroup"
+        app:showAsAction="never"
+        />
+</menu>

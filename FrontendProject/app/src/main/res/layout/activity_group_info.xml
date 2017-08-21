@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="hr.fer.ruazosa.sharemylocation.GroupInfoActivity">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/groupPic"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/default_avatar"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintVertical_bias="0.073" />
+
+
+    <TextView
+        android:id="@+id/groupname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/addgroupname"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/groupPic"
+        app:layout_constraintHorizontal_bias="0.501"></TextView>
+
+
+    <TextView
+        android:id="@+id/groupinfo"
+        android:layout_width="187dp"
+        android:layout_height="46dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="66dp"
+        android:text="@string/groupinfo"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintHorizontal_bias="0.149"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/groupname"></TextView>
+
+
+    <TextView
+        android:id="@+id/admin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="30dp"
+        android:hint="Admin"
+        android:textSize="20dp"
+        app:layout_constraintHorizontal_bias="0.87"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/groupinfo"></TextView>
+
+
+    <TextView
+        android:id="@+id/numofmembers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="41dp"
+        android:layout_marginTop="30dp"
+        android:hint="Number"
+        android:paddingLeft="8dp"
+        android:textSize="18dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/admin"></TextView>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="30dp"
+        android:text="Admin:"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintHorizontal_bias="0.187"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/admin"
+        app:layout_constraintTop_toBottomOf="@+id/groupinfo" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="30dp"
+        android:text="Number of members:"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/numofmembers"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintHorizontal_bias="0.325" />
+
+</android.support.constraint.ConstraintLayout>

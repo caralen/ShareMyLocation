@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="hr.fer.ruazosa.sharemylocation.ChangePasswordActivity">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profilePic"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="32dp"
+        android:src="@drawable/default_avatar"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/changePassword"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintVertical_bias="0.028" />
+
+
+    <TextView
+        android:id="@+id/username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/addusername"
+        android:layout_marginTop="24dp"
+        app:layout_constraintTop_toBottomOf="@+id/profilePic"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent">
+    </TextView>
+
+
+    <TextView
+        android:id="@+id/personalinfo"
+        android:layout_width="187dp"
+        android:layout_height="46dp"
+        android:text="@string/personalinfo"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:layout_marginTop="32dp"
+        app:layout_constraintTop_toBottomOf="@+id/username"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHorizontal_bias="0.093"></TextView>
+
+
+    <TextView
+        android:id="@+id/firstnamelastname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="30dp"
+        android:text="FIRST NAME AND LAST NAME"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/personalinfo"
+        android:layout_marginLeft="0dp"
+        app:layout_constraintLeft_toLeftOf="@+id/personalinfo"
+        app:layout_constraintHorizontal_bias="0.01"></TextView>
+
+
+    <TextView
+        android:id="@+id/email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="24dp"
+        android:text="EMAIL"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/firstnamelastname"
+        android:layout_marginLeft="0dp"
+        app:layout_constraintLeft_toLeftOf="@+id/firstnamelastname"
+        app:layout_constraintHorizontal_bias="0.0"></TextView>
+
+
+    <TextView
+        android:id="@+id/phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/phone"
+        android:layout_marginTop="25dp"
+        app:layout_constraintTop_toBottomOf="@+id/email"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginLeft="0dp"
+        app:layout_constraintLeft_toLeftOf="@+id/email"
+        app:layout_constraintHorizontal_bias="0.0">
+    </TextView>
+
+    <Button
+        android:id="@+id/editprofile"
+        android:layout_width="216dp"
+        android:layout_height="48dp"
+        android:background="@color/colorPrimary"
+        android:onClick="saveReg"
+        android:text="@string/editprofile"
+        android:textColor="@android:color/white"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/changePassword"
+        app:layout_constraintVertical_bias="0.983" />
+
+    <Button
+        android:id="@+id/changePassword"
+        android:layout_width="216dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="0dp"
+        android:background="@color/colorPrimary"
+        android:onClick="saveReg"
+        android:text="Change Password"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.984" />
+
+
+</android.support.constraint.ConstraintLayout>
+

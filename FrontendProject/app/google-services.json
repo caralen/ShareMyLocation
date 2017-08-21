@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "446714188461",
+    "firebase_url": "https://sharemylocation-ffe24.firebaseio.com",
+    "project_id": "sharemylocation-ffe24",
+    "storage_bucket": "sharemylocation-ffe24.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:446714188461:android:1a4b41573660f229",
+        "android_client_info": {
+          "package_name": "hr.fer.ruazosa.sharemylocation"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "446714188461-as30cv82dinr6j9vetsjjtcd1dfm2leb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAZ6uNNts9C-HfemidAfHgXoTG_Oxullgo"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
