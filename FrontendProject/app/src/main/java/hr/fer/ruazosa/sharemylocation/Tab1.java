@@ -66,9 +66,6 @@ public class Tab1 extends ListFragment {
                 view.setBackground(trans2);
                 trans2.startTransition(2000); // duration 2 seconds
                 goToGroup(position);
-
-                goToGroup(position);
-
             }
         });
     }
